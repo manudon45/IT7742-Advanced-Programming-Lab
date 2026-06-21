@@ -152,5 +152,105 @@
             Assert.AreEqual(expected, result, "0 / 5 should equal 0");
         }
         #endregion
+
+        #region Factorial Tests - Complex Logic with Boundary Conditions
+        [TestMethod]
+        public void Factorial_ZeroInput_ReturnsOne()
+        {
+            // Arrange
+            int n = 0;
+            int expected = 1;
+
+            // Act
+            int result = calculator.Factorial(n);
+
+            // Assert
+            Assert.AreEqual(expected, result, "0! should equal 1 (base case)");
+        }
+
+        [TestMethod]
+        public void Factorial_OneInput_ReturnsOne()
+        {
+            // Arrange
+            int n = 1;
+            int expected = 1;
+
+            // Act
+            int result = calculator.Factorial(n);
+
+            // Assert
+            Assert.AreEqual(expected, result, "1! should equal 1 (base case)");
+        }
+
+        [TestMethod]
+        public void Factorial_SmallPositiveNumber_ReturnsCorrectValue()
+        {
+            // Arrange
+            int n = 5;
+            int expected = 120;
+
+            // Act
+            int result = calculator.Factorial(n);
+
+            // Assert
+            Assert.AreEqual(expected, result, "5! should equal 120");
+        }
+
+        [TestMethod]
+        public void Factorial_TwoInput_ReturnsTwo()
+        {
+            // Arrange
+            int n = 2;
+            int expected = 2;
+
+            // Act
+            int result = calculator.Factorial(n);
+
+            // Assert
+            Assert.AreEqual(expected, result, "2! should equal 2");
+        }
+
+        [TestMethod]
+        public void Factorial_ThreeInput_ReturnsSix()
+        {
+            // Arrange
+            int n = 3;
+            int expected = 6;
+
+            // Act
+            int result = calculator.Factorial(n);
+
+            // Assert
+            Assert.AreEqual(expected, result, "3! should equal 6");
+        }
+
+        [TestMethod]
+        public void Factorial_FourInput_ReturnsTwentyFour()
+        {
+            // Arrange
+            int n = 4;
+            int expected = 24;
+
+            // Act
+            int result = calculator.Factorial(n);
+
+            // Assert
+            Assert.AreEqual(expected, result, "4! should equal 24");
+        }
+
+        [TestMethod]
+        public void Factorial_TenInput_ReturnsCorrectValue()
+        {
+            // Arrange
+            int n = 10;
+            int expected = 3628800;
+
+            // Act
+            int result = calculator.Factorial(n);
+
+            // Assert
+            Assert.AreEqual(expected, result, "10! should equal 3,628,800");
+        }
+        #endregion
     }
 }

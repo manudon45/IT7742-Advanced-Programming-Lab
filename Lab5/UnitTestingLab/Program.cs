@@ -25,6 +25,12 @@
             Console.WriteLine($"10 / 2 = {calculator.Divide(10, 2)}");
             Console.WriteLine($"15 / 4 = {calculator.Divide(15, 4)}");
             Console.WriteLine($"-10 / 2 = {calculator.Divide(-10, 2)}\n");
+
+            // Factorial examples
+            Console.WriteLine("Factorial Examples:");
+            Console.WriteLine($"0! = {calculator.Factorial(0)}");
+            Console.WriteLine($"5! = {calculator.Factorial(5)}");
+            Console.WriteLine($"10! = {calculator.Factorial(10)}\n");
         }
     }
 }
